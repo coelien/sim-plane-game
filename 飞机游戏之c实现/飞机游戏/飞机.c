@@ -14,6 +14,7 @@ int main()
 while (c!='@')
 	{
 		system("cls");
+		//比分显示
 		printf("\t|--------score--------|\n");
 		printf("\t|            %03d      |\n", 100 * iskilled); 
 		if (iskilled==1)
@@ -22,6 +23,7 @@ while (c!='@')
 			_getch();
 			return 0;
 		}
+		//移动的靶
 		if (iskilled == 0)                                                                         //显示靶（激光不重吧）
 		{
 			for (j = 0; j < y0; j++)
@@ -30,8 +32,9 @@ while (c!='@')
 			y0 += v;
 			if (y0 == 0 || y0 == 50)
 			v = -v;
-		}                                                            
-		if (isfire == 0)                                                                          //显示激光（开火）
+		}         
+		//显示激光（开火）                                                      
+		if (isfire == 0)                                                                       
 		{
 			
 			for (i = 1; i < x; i++)
@@ -61,8 +64,7 @@ while (c!='@')
 		for (j = 0; j<y; j++)
 		printf(" ");
 		printf(" * *\n");
-	  
-	   //判断是否有输入
+	    //判断是否有输入
 		if (_kbhit())                                              
 		{
 			c = _getch();
